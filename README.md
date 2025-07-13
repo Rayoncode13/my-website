@@ -7,56 +7,91 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## TechPulse: Berita Teknologi Terkini
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**TechPulse** adalah platform berita teknologi mutakhir yang dirancang untuk memberikan informasi terkini dan komprehensif seputar dunia teknologi. Dibangun di atas kerangka kerja Laravel yang kuat, aplikasi ini menyajikan artikel unggulan, berita terbaru, dan topik yang sedang tren dalam antarmuka yang intuitif dan responsif.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Fitur Aplikasi
 
-## Learning Laravel
+* **Dasbor Berita Komprehensif**: Menampilkan artikel unggulan, berita sisi, dan aliran berita terbaru untuk pengalaman membaca yang kaya.
+* **Navigasi Berbasis Kategori**: Memungkinkan pengguna menjelajahi berita berdasarkan kategori spesifik seperti AI & ML, Gadget, Startup, Gaming, dan Blockchain.
+* **Fungsionalitas Pencarian**: Fitur pencarian terintegrasi untuk menemukan artikel berita yang relevan dengan cepat.
+* **Bagian Topik Tren**: Menyoroti artikel dan topik yang sedang populer untuk menjaga pengguna tetap terinformasi.
+* **Langganan Buletin**: Pengguna dapat dengan mudah berlangganan buletin untuk menerima pembaruan berita teknologi terkini langsung ke kotak masuk mereka.
+* **Desain Adaptif**: Menggunakan Tailwind CSS untuk memastikan pengalaman yang mulus di berbagai perangkat dan ukuran layar.
+* **Animasi Visual**: Animasi scroll yang halus untuk meningkatkan interaksi dan estetika pengguna.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Teknologi yang Digunakan
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* **Laravel**: Kerangka kerja aplikasi web PHP yang digunakan untuk arsitektur backend yang kuat dan efisien.
+* **Vite**: Tool pengembangan frontend modern untuk kompilasi aset yang cepat dan hot module reloading.
+* **Tailwind CSS**: Kerangka kerja CSS utility-first yang memungkinkan pengembangan antarmuka pengguna yang cepat dan kustomisasi yang tinggi.
+* **Axios**: Klien HTTP berbasis Promise untuk browser dan Node.js, digunakan untuk permintaan data asinkron.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Memulai
 
-## Laravel Sponsors
+Ikuti langkah-langkah ini untuk menyiapkan dan menjalankan proyek TechPulse di lingkungan lokal Anda.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Prasyarat
 
-### Premium Partners
+Pastikan Anda telah menginstal perangkat lunak berikut di sistem Anda:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* PHP (versi 8.2 atau lebih tinggi)
+* Composer
+* Node.js (versi 16 atau lebih tinggi)
+* npm atau Yarn
 
-## Contributing
+### Instalasi
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1.  **Kloning Repositori:**
+    ```bash
+    git clone <URL_REPOSITORI_ANDA>
+    cd my-website
+    ```
 
-## Code of Conduct
+2.  **Instal Dependensi Backend:**
+    ```bash
+    composer install
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3.  **Instal Dependensi Frontend:**
+    ```bash
+    npm install
+    ```
 
-## Security Vulnerabilities
+4.  **Konfigurasi Lingkungan:**
+    Buat salinan file `.env.example` dan beri nama `.env`:
+    ```bash
+    cp .env.example .env
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5.  **Buat Kunci Aplikasi:**
+    Hasilkan kunci aplikasi Laravel:
+    ```bash
+    php artisan key:generate
+    ```
 
-## License
+6.  **Konfigurasi Database:**
+    Secara default, proyek ini dikonfigurasi untuk menggunakan SQLite. Pastikan file database ada atau buatlah:
+    ```bash
+    touch database/database.sqlite
+    ```
+    Kemudian, jalankan migrasi database untuk membuat tabel yang diperlukan:
+    ```bash
+    php artisan migrate
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# my-website" 
+7.  **Isi Database (Opsional):**
+    Jika tersedia seeder data dummy, Anda dapat mengisinya dengan perintah berikut:
+    ```bash
+    php artisan db:seed
+    ```
+
+### Menjalankan Aplikasi
+
+Untuk menjalankan server pengembangan dan memantau aset frontend, gunakan perintah berikut:
+
+```bash
+npm run dev
